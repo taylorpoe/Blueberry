@@ -1,2 +1,0 @@
-# Blueberry
-Exploring Meteor
