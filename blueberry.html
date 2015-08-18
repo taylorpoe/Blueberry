@@ -1,0 +1,54 @@
+<head>
+  <title>Blueberry-todos</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      
+      <div class="login">{{> loginButtons}}
+      </div>
+      
+      <h1 class="center-text">Blueberry Teux Deuxs ({{incompleteCount}})</h1>
+      
+      <div class="toggles">
+      	<label class="hide-completed">
+      	  <input type="checkbox" checked="{{hideCompleted}}" />
+      	  Hide Completed Tasks
+      	</label>
+      </div>
+
+      {{#if currentUser}}
+        <form class="new-task">
+          <input type="text" name="text" placeholder="+ Add new task" />
+        </form>
+      {{/if}}
+    </header>
+ 
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+ 
+<template name="task">
+  <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
+    <button class="delete">&times;</button>
+ 
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+    {{#if isOwner}}
+      <button class="toggle-private">
+        {{#if private}}
+          Private
+        {{else}}
+          Public
+        {{/if}}
+      </button>
+    {{/if}}
+
+    <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+  </li>
+</template>

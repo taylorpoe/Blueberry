@@ -1,0 +1,165 @@
+/* CSS declarations go here */
+body {
+	background-color: #daabdb;
+	box-sizing: border-box;
+	font-family: fira sans, sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: auto;
+}
+
+li {
+	background-color: white;
+	color: #656077;
+	padding: 13px 12px 9px 12px;
+	border-radius: 7px;
+	margin: auto;
+	margin-bottom: 12px;
+	min-width: 300px;
+	max-width: 500px;
+	box-shadow: 0 3px 4px rgba(0,0,0,0.07);
+	line-height: 1.5em;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+li.checked {
+  color: #888;
+}
+
+li.checked .text {
+  text-decoration: line-through;
+}
+
+li.private {
+  background: #eee;
+  border-color: #ddd;
+}
+
+.login {
+	min-width: 120px;
+	/*background-color: red;*/
+	font-size: 11px;
+	position: absolute;
+	right: -147px;
+	top: 25px;
+}
+
+.container {
+	position: relative;
+	background-color: #f2f7ff;
+	max-width: 550px;
+	min-height: 500px;
+	margin: 70px auto;
+	padding: 20px 80px;
+	border: solid 4px white;
+	border-radius: 13px;
+	box-shadow: 0 20px 70px 0px rgba(0,0,0,0.27),
+	 0 4px 3px rgba(0,0,0,0.05);
+}
+
+.center-text {
+	text-align: center;
+}
+
+#login-buttons {
+  display: block;
+}
+
+form {
+  margin-top: -10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.new-task input {
+  color: #7B95BF;
+  padding: 10px 14px 10px 12px;
+  background: #f2f7ff;
+  border: 2px solid #f2f7ff;
+  border-radius: 7px;
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  transition: all 120ms;
+}
+
+.new-task input::-webkit-input-placeholder {
+   color: #7B95BF;
+}
+
+.new-task input:focus::-webkit-input-placeholder 
+{
+color: transparent;
+}
+
+.new-task input:hover {
+	background-color: white;
+	border-color: white;
+}
+
+.new-task input:focus {
+  background-color: white;
+  border-color: #b180b4;
+  outline: 0;
+}
+
+.delete {
+  float: right;
+  font-weight: bold;
+  background: none;
+  font-size: 1em;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggles {
+	margin: 20px;
+	position: relative;
+}
+
+header .hide-completed {
+	
+}
+
+.toggle-private {
+  margin-left: 5px;
+}
+
+input [type='checkbox'] {
+	cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .container {
+  	max-width: 100%;
+  	width: 100%;
+  	margin: 3px auto;
+  }
+
+  li {
+    padding: 12px 15px;
+  }
+
+  .search {
+    width: 150px;
+    clear: both;
+  }
+
+  .new-task input {
+    padding-bottom: 5px;
+  }
+}
